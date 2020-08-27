@@ -10,7 +10,7 @@ function insertDash(word) {
     return "";
   }
   return word.split("").map((letter, index, letters) => {
-    if (index > 0 && isConsonant(letters[index-1]) && isConsonant(letter)) {
+    if (index > 0 && isConsonant(letters[index - 1]) && isConsonant(letter)) {
       return `-${letter}`;
     }
     return letter;
