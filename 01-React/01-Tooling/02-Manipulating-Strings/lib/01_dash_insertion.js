@@ -9,8 +9,8 @@ function insertDash(word) {
   if (!word || word.length === 0) {
     return "";
   }
-  return word.split("").map((letter, index, previousLetter) => {
-    if (index > 0 && isConsonant(previousLetter[index-1]) && isConsonant(letter)) {
+  return word.split("").map((letter, index, letters) => {
+    if (index > 0 && isConsonant(letters[index-1]) && isConsonant(letter)) {
       return `-${letter}`;
     }
     return letter;
