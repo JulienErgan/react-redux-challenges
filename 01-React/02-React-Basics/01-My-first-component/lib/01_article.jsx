@@ -1,5 +1,6 @@
 // TODO: import the right dependencies
-import React, {Component} from 'react'
+import react from 'react';
+import React, { Component } from 'react';
 // TODO: code the Article component
 const Article = (props) => {
   return (
