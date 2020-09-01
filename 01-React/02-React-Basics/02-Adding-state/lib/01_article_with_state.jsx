@@ -27,16 +27,26 @@ class Article extends Component {
   handleClick = () => {
     this.setState({
       clicked: !this.state.clicked
-    })
+    });
   }
+
+  articleClass() {
+    let articleClass = 'article';
+    if (this.state.clicked) {
+      articleClass += ' clicked';
+    }
+    return articleClass
+  }
+
 
   render() {
     return (
-      <div className={this.state.clicked ? "article clicked" : "article"} onClick={this.handleClick}>
+      // <div className={this.state.clicked ? "article clicked" : "article"} onClick={this.handleClick}>
+      <div className={this.articleClass()} onClick={this.handleClick}>
         <h2 className="article-title">{this.props.title}</h2>
         <p>{this.props.body}</p>
       </div>
-    )
+    );
   }
 }
 
